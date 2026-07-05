@@ -99,18 +99,27 @@
 
 .mobile-menu {
   position: fixed;
-  inset: 0 0 0 auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
   width: min(360px, 90vw);
   background: var(--est-color-bg-secondary);
   border-left: 1px solid var(--est-color-border-default);
-  z-index: 2000;
+  z-index: 99999;
   padding: var(--est-space-5);
   transform: translateX(100%);
-  transition: transform var(--est-transition-normal);
+  transition: transform var(--est-transition-normal), opacity var(--est-transition-fast);
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  overflow-y: auto;
 }
-
-.mobile-menu.is-open {
+.mobile-menu.is-open,
+.mobile-menu[aria-hidden="false"] {
   transform: translateX(0);
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .mobile-menu__header {
