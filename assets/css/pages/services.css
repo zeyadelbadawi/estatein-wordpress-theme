@@ -1,0 +1,36 @@
+/**
+ * Services Page Styles
+ *
+ * Styles specific to the Services page template.
+ */
+
+/* ─── Feature Card ───────────────────────────────────── */
+
+.feature-card {
+	text-align: left;
+}
+
+.feature-card__icon {
+	width: 56px;
+	height: 56px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--est-color-brand-muted);
+	border-radius: var(--est-radius-lg);
+	color: var(--est-color-brand-primary);
+	margin-bottom: var(--est-space-5);
+}
+
+.feature-card__title {
+	font-size: var(--est-font-size-lg);
+	font-weight: var(--est-font-weight-bold);
+	color: var(--est-color-text-primary);
+	margin-bottom: var(--est-space-3);
+}
+
+.feature-card__description {
+	font-size: var(--est-font-size-sm);
+	color: var(--est-color-text-secondary);
+	line-height: var(--est-line-height-relaxed);
+}

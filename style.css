@@ -1,0 +1,25 @@
+/*
+Theme Name: Estatein
+Theme URI: https://estatein.com
+Author: ziad Elbadawi - Senior Full Stack Developer
+Author URI: https://github.com/alex
+Description: A premium custom WordPress theme for Estatein real estate company. Features a modern dark-themed design with purple accents, custom post types for properties, testimonials, and FAQs, and a fully responsive mobile-first architecture.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.4
+Requires PHP: 8.0
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: estatein
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, dark, real-estate
+
+Estatein WordPress Theme
+Copyright (C) 2024 Estatein
+
+This theme is built following WordPress Coding Standards (WPCS),
+with a focus on maintainability, accessibility, and performance.
+
+Architecture Notes:
+- CSS is loaded via assets/css/main.css (concatenated from modular files)
+- This file exists solely for WordPress theme identification
+- All presentational styles live in assets/css/
+*/

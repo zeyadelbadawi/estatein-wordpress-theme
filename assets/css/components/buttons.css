@@ -1,0 +1,111 @@
+/**
+ * Buttons
+ *
+ * Button component styles following BEM methodology.
+ * Variants: primary, secondary, outline, ghost.
+ */
+
+.btn {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: var(--est-space-2);
+	padding: var(--est-space-3) var(--est-space-6);
+	font-family: var(--est-font-family);
+	font-size: var(--est-font-size-sm);
+	font-weight: var(--est-font-weight-medium);
+	line-height: 1;
+	text-decoration: none;
+	border: 1px solid transparent;
+	border-radius: var(--est-radius-md);
+	cursor: pointer;
+	transition: all var(--est-transition-fast);
+	white-space: nowrap;
+}
+
+.btn:focus-visible {
+	outline: 2px solid var(--est-color-brand-primary);
+	outline-offset: 2px;
+}
+
+/* Primary - Solid purple */
+.btn--primary {
+	background-color: var(--est-color-brand-primary);
+	color: var(--est-color-text-primary);
+	border-color: var(--est-color-brand-primary);
+}
+
+.btn--primary:hover {
+	background-color: var(--est-color-brand-hover);
+	border-color: var(--est-color-brand-hover);
+	color: var(--est-color-text-primary);
+}
+
+/* Secondary - Dark with border */
+.btn--secondary {
+	background-color: var(--est-color-bg-secondary);
+	color: var(--est-color-text-primary);
+	border-color: var(--est-color-border-default);
+}
+
+.btn--secondary:hover {
+	background-color: var(--est-color-bg-card);
+	color: var(--est-color-text-primary);
+}
+
+/* Outline - Transparent with border */
+.btn--outline {
+	background-color: transparent;
+	color: var(--est-color-text-primary);
+	border-color: var(--est-color-border-default);
+}
+
+.btn--outline:hover {
+	background-color: var(--est-color-bg-card);
+	color: var(--est-color-text-primary);
+}
+
+/* Ghost - No border, no background */
+.btn--ghost {
+	background-color: transparent;
+	color: var(--est-color-text-secondary);
+	border-color: transparent;
+}
+
+.btn--ghost:hover {
+	color: var(--est-color-text-primary);
+	background-color: var(--est-color-bg-card);
+}
+
+/* Size variants */
+.btn--sm {
+	padding: var(--est-space-2) var(--est-space-4);
+	font-size: var(--est-font-size-xs);
+}
+
+.btn--lg {
+	padding: var(--est-space-4) var(--est-space-8);
+	font-size: var(--est-font-size-base);
+}
+
+/* Icon button (square) */
+.btn--icon {
+	padding: var(--est-space-3);
+	aspect-ratio: 1;
+}
+
+.btn--icon.btn--round {
+	border-radius: var(--est-radius-full);
+}
+
+/* Full width */
+.btn--full {
+	width: 100%;
+}
+
+/* Disabled state */
+.btn:disabled,
+.btn[aria-disabled="true"] {
+	opacity: 0.5;
+	pointer-events: none;
+}

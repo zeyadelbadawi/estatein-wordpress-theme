@@ -1,0 +1,130 @@
+/**
+ * Contact Page Styles
+ *
+ * Styles specific to the Contact Us page template.
+ */
+
+/* ─── Contact Form ───────────────────────────────────── */
+
+.contact-form-wrapper {
+	background-color: var(--est-color-bg-surface);
+	border: 1px solid var(--est-color-border-default);
+	border-radius: var(--est-radius-xl);
+	padding: var(--est-space-6);
+}
+
+.contact-form__grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--est-space-4);
+	margin-bottom: var(--est-space-6);
+}
+
+.form-group--full {
+	margin-bottom: var(--est-space-6);
+}
+
+.contact-form__footer {
+	display: flex;
+	flex-direction: column;
+	gap: var(--est-space-4);
+	align-items: flex-start;
+}
+
+@media (min-width: 768px) {
+	.contact-form-wrapper {
+		padding: var(--est-space-10);
+	}
+
+	.contact-form__grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.contact-form__footer {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+@media (min-width: 1024px) {
+	.contact-form__grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* ─── Office Card ────────────────────────────────────── */
+
+.office-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.office-card__badge {
+	display: inline-block;
+	background-color: var(--est-color-bg-secondary);
+	border: 1px solid var(--est-color-border-default);
+	border-radius: var(--est-radius-full);
+	padding: var(--est-space-1) var(--est-space-3);
+	font-size: var(--est-font-size-xs);
+	color: var(--est-color-text-secondary);
+	margin-bottom: var(--est-space-4);
+	align-self: flex-start;
+}
+
+.office-card__title {
+	font-size: var(--est-font-size-xl);
+	font-weight: var(--est-font-weight-bold);
+	color: var(--est-color-text-primary);
+	margin-bottom: var(--est-space-3);
+}
+
+.office-card__description {
+	font-size: var(--est-font-size-sm);
+	color: var(--est-color-text-secondary);
+	line-height: var(--est-line-height-relaxed);
+	margin-bottom: var(--est-space-6);
+}
+
+.office-card__details {
+	display: flex;
+	flex-direction: column;
+	gap: var(--est-space-3);
+	margin-bottom: var(--est-space-6);
+	flex-grow: 1;
+}
+
+.office-card__detail {
+	display: flex;
+	align-items: center;
+	gap: var(--est-space-3);
+	font-size: var(--est-font-size-sm);
+	color: var(--est-color-text-secondary);
+}
+
+.office-card__detail svg {
+	flex-shrink: 0;
+	color: var(--est-color-brand-primary);
+}
+
+.office-card__detail a {
+	color: var(--est-color-text-secondary);
+	text-decoration: none;
+	transition: color var(--est-transition-fast);
+}
+
+.office-card__detail a:hover {
+	color: var(--est-color-text-primary);
+}
+
+/* ─── Form Checkbox Link ─────────────────────────────── */
+
+.form-checkbox__label a {
+	color: var(--est-color-text-primary);
+	text-decoration: underline;
+	text-underline-offset: 2px;
+}
+
+.form-checkbox__label a:hover {
+	color: var(--est-color-brand-primary);
+}

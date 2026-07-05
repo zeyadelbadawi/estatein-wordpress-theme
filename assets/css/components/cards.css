@@ -1,0 +1,272 @@
+/**
+ * Cards
+ *
+ * Card component styles for properties, testimonials, FAQs, etc.
+ * All cards share a common base with variant-specific overrides.
+ */
+
+/* Base card */
+.card {
+	background-color: var(--est-color-bg-surface);
+	border: 1px solid var(--est-color-border-default);
+	border-radius: var(--est-radius-lg);
+	padding: var(--est-space-6);
+	transition: border-color var(--est-transition-fast);
+}
+
+.card:hover {
+	border-color: var(--est-color-border-default);
+}
+
+/* ─── Property Card ──────────────────────────────────── */
+
+.property-card {
+	padding: var(--est-space-4);
+	display: flex;
+	flex-direction: column;
+}
+
+.property-card__image {
+	position: relative;
+	border-radius: var(--est-radius-md);
+	overflow: hidden;
+	margin-bottom: var(--est-space-4);
+	aspect-ratio: 16 / 11;
+}
+
+.property-card__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.property-card__badge {
+	position: absolute;
+	top: var(--est-space-3);
+	left: var(--est-space-3);
+	background-color: var(--est-color-bg-surface);
+	border: 1px solid var(--est-color-border-default);
+	border-radius: var(--est-radius-full);
+	padding: var(--est-space-1) var(--est-space-3);
+	font-size: var(--est-font-size-xs);
+	color: var(--est-color-text-primary);
+}
+
+.property-card__title {
+	font-size: var(--est-font-size-lg);
+	font-weight: var(--est-font-weight-bold);
+	color: var(--est-color-text-primary);
+	margin-bottom: var(--est-space-2);
+}
+
+.property-card__description {
+	font-size: var(--est-font-size-sm);
+	color: var(--est-color-text-secondary);
+	margin-bottom: var(--est-space-4);
+	line-height: var(--est-line-height-relaxed);
+}
+
+.property-card__meta {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--est-space-3);
+	margin-bottom: var(--est-space-5);
+}
+
+.property-card__meta-item {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--est-space-1);
+	background-color: var(--est-color-bg-secondary);
+	border: 1px solid var(--est-color-border-default);
+	border-radius: var(--est-radius-full);
+	padding: var(--est-space-1) var(--est-space-3);
+	font-size: var(--est-font-size-xs);
+	color: var(--est-color-text-primary);
+}
+
+.property-card__meta-item svg {
+	width: 16px;
+	height: 16px;
+	color: var(--est-color-text-secondary);
+}
+
+.property-card__footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: var(--est-space-4);
+	margin-top: auto;
+	padding-top: var(--est-space-4);
+	border-top: 1px solid var(--est-color-border-default);
+}
+
+.property-card__price-label {
+	font-size: var(--est-font-size-xs);
+	color: var(--est-color-text-secondary);
+	display: block;
+	margin-bottom: var(--est-space-1);
+}
+
+.property-card__price {
+	font-size: var(--est-font-size-lg);
+	font-weight: var(--est-font-weight-bold);
+	color: var(--est-color-text-primary);
+	display: block;
+}
+
+/* ─── Testimonial Card ───────────────────────────────── */
+
+.testimonial-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.testimonial-card__rating {
+	display: flex;
+	gap: var(--est-space-1);
+	margin-bottom: var(--est-space-4);
+}
+
+.testimonial-card__rating svg {
+	width: 20px;
+	height: 20px;
+	color: var(--est-color-rating);
+}
+
+.testimonial-card__title {
+	font-size: var(--est-font-size-lg);
+	font-weight: var(--est-font-weight-bold);
+	color: var(--est-color-text-primary);
+	margin-bottom: var(--est-space-2);
+}
+
+.testimonial-card__text {
+	font-size: var(--est-font-size-sm);
+	color: var(--est-color-text-secondary);
+	line-height: var(--est-line-height-relaxed);
+	margin-bottom: var(--est-space-6);
+	flex-grow: 1;
+}
+
+.testimonial-card__author {
+	display: flex;
+	align-items: center;
+	gap: var(--est-space-3);
+	padding-top: var(--est-space-4);
+	border-top: 1px solid var(--est-color-border-default);
+}
+
+.testimonial-card__avatar {
+	width: 48px;
+	height: 48px;
+	border-radius: var(--est-radius-full);
+	object-fit: cover;
+}
+
+.testimonial-card__author-name {
+	font-size: var(--est-font-size-base);
+	font-weight: var(--est-font-weight-medium);
+	color: var(--est-color-text-primary);
+}
+
+.testimonial-card__author-location {
+	font-size: var(--est-font-size-sm);
+	color: var(--est-color-text-secondary);
+}
+
+/* ─── FAQ Card ───────────────────────────────────────── */
+
+.faq-card {
+	display: flex;
+	flex-direction: column;
+}
+
+.faq-card__question {
+	font-size: var(--est-font-size-lg);
+	font-weight: var(--est-font-weight-semibold);
+	color: var(--est-color-text-primary);
+	margin-bottom: var(--est-space-3);
+}
+
+.faq-card__answer {
+	font-size: var(--est-font-size-sm);
+	color: var(--est-color-text-secondary);
+	line-height: var(--est-line-height-relaxed);
+	margin-bottom: var(--est-space-5);
+	flex-grow: 1;
+}
+
+/* ─── Service Card ───────────────────────────────────── */
+
+.service-card {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--est-space-4);
+	padding: var(--est-space-4) var(--est-space-5);
+}
+
+.service-card__icon {
+	flex-shrink: 0;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--est-color-brand-muted);
+	border-radius: var(--est-radius-md);
+	color: var(--est-color-brand-primary);
+}
+
+.service-card__icon svg {
+	width: 24px;
+	height: 24px;
+}
+
+.service-card__content {
+	flex-grow: 1;
+}
+
+.service-card__title {
+	font-size: var(--est-font-size-lg);
+	font-weight: var(--est-font-weight-semibold);
+	color: var(--est-color-text-primary);
+}
+
+.service-card__arrow {
+	flex-shrink: 0;
+	color: var(--est-color-text-muted);
+	transition: color var(--est-transition-fast);
+}
+
+.service-card:hover .service-card__arrow {
+	color: var(--est-color-brand-primary);
+}
+
+/* ─── Stat Box ───────────────────────────────────────── */
+
+.stat-box {
+	text-align: center;
+	padding: var(--est-space-4) var(--est-space-6);
+	background-color: var(--est-color-bg-card);
+	border: 1px solid var(--est-color-border-default);
+	border-radius: var(--est-radius-lg);
+}
+
+.stat-box__number {
+	font-size: var(--est-font-size-2xl);
+	font-weight: var(--est-font-weight-bold);
+	color: var(--est-color-text-primary);
+	margin-bottom: var(--est-space-1);
+}
+
+.stat-box__label {
+	font-size: var(--est-font-size-sm);
+	color: var(--est-color-text-secondary);
+}
+
+@media (min-width: 768px) {
+	.stat-box__number {
+		font-size: var(--est-font-size-3xl);
+	}
+}
