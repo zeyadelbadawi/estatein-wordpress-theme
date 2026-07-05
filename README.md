@@ -472,13 +472,3 @@ This theme is licensed under the [GNU General Public License v2.0](https://www.g
 
 ---
 
-## Credits
-
-- **Design**: Estatein Figma Design System
-- **Typography**: [Urbanist](https://fonts.google.com/specimen/Urbanist) by Coconnor
-- **Icons**: Custom SVG icon set (inline)
-- **Images**: [Unsplash](https://unsplash.com) (demo only)
-
----
-
-*Built with ❤️ as a Senior WordPress Developer Technical Assessment*
